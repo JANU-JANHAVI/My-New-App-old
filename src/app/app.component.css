@@ -1,0 +1,52 @@
+
+.header {
+  background-color: rgb(255, 255, 255);
+  margin-top: -8px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 20px;
+  display: flex;
+}
+.bar {
+  background-color: rgb(255, 255, 255);
+}
+.sample {
+  flex: 1 1 auto;
+}
+.text {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.menu-icon {
+  background-color: white;
+  color: black;
+  border: none;
+ 
+}
+.favorite-icon {
+  background-color: white;
+  color: black;
+  border: none;
+  
+}
+.share-icon {
+  background-color: white;
+  color: black;
+  border: none;
+}
+.search-icon {
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+.product-link {
+  background-color: white;
+  border: none;
+  font-size: larger;
+  margin-right: 16px;
+  cursor: pointer;
+}
