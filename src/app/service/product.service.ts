@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class ProductService {
   apiUrl = `${environment.apiUrl}${appConstant.apiRoute.products}`;
   constructor(private http: HttpClient) {}
   getproducts(): Observable<Product[]> {
