@@ -9,9 +9,9 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class DataService {
-  apilink = `${environment.apiUrl}${appConstant.apiRoute.products}`;
+  apiUrl = `${environment.apiUrl}${appConstant.apiRoute.products}`;
   constructor(private http: HttpClient) {}
   getproducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apilink);
+    return this.http.get<Product[]>(this.apiUrl);
   }
 }
