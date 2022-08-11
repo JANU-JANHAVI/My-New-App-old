@@ -17,12 +17,22 @@
   color: black;
   border: none;
 }
+.search-icon {
+  background-color: red;
+  color: black;
+  border: none;
+}
 .favorite-icon {
   background-color: red;
   color: black;
   border: none;
 }
 .share-icon {
+  background-color: red;
+  color: black;
+  border: none;
+}
+.home-icon {
   background-color: red;
   color: black;
   border: none;
