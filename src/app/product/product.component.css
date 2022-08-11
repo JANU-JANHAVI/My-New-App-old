@@ -1,5 +1,17 @@
-.card-img {
+.img {
   object-fit: cover;
-  width: 90%;
-  height:100px;
+  width: 50%;
+  height: 160px;
+}
+.likebt {
+  border: none;
+  cursor: pointer;
+}
+.sharebt {
+  border: none;
+  cursor: pointer;
+}
+.uii {
+  display: flex;
+  gap: 50px;
 }
