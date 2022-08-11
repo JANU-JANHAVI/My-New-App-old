@@ -1,10 +1,5 @@
-
-.header {
+.container {
   background-color: red;
-  margin-top: -8px;
-  margin-left: -16px;
-  margin-right: -16px;
-  padding: 20px;
   display: flex;
 }
 .bar {
@@ -15,21 +10,17 @@
 }
 .text {
   font-size: 20px;
-  font-family: sans-serif;
-  font-weight: 600;
+  font-family: aerial;
 }
-
 .menu-icon {
   background-color: red;
   color: black;
   border: none;
- 
 }
 .favorite-icon {
   background-color: red;
   color: black;
   border: none;
-  
 }
 .share-icon {
   background-color: red;
@@ -47,6 +38,4 @@
   background-color: red;
   border: none;
   font-size: larger;
-  margin-right: 16px;
-  cursor: pointer;
 }
