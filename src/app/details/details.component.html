@@ -1,3 +1,4 @@
+<div *ngIf="product"> 
 <div class="product-center">
 <div class="product-heading">
 <h1>{{product.title}}</h1>
@@ -7,28 +8,22 @@
 </div>
 <div class="product-labels">
   <label>Price:</label>
-  <p>{{product.price}}</p>
-
+  <span>{{product.price}}</span>
 </div>
 <div class="product-labels">
   <label>Category:</label>
-  <p>{{product.category}}</p>
-
+  <span>{{product.category}}</span>
 </div>
 <div class="product-labels">
   <label>Description:</label>
-  <p>{{product.description}}</p>
-
+  <span>{{product.description}}</span>
 </div>
 <div class="product-labels">
 <label>Stock:</label>
-<p>{{product.stock}}</p>
-
+<span>{{product.stock}}</span>
 </div>
 <div class="product-labels">
 <label>Brand:</label>
-<p>{{product.brand}}</p>
-
+<span>{{product.brand}}</span>
 </div>
-
 </div>
