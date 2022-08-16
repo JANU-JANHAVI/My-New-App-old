@@ -1,0 +1,33 @@
+:host{
+.product-image-block, .product-heading, .product-labels{
+    text-align: center;
+    width : 100%;
+  }
+  .product-image-block{
+    img {
+      max-width: 100%;
+      height:auto;
+    }
+  }
+  .product-labels{
+    display: flex;
+    justify-content:center;
+    padding: 20px;
+    .product-label{
+      padding-left: 15px;
+    }
+
+  }
+}
+@media(max-width:992px){
+  .product-center{
+    display: flex;
+    justify-content:center;
+    flex-flow: wrap;
+.product-image-block, .product-heading, .product-labels{
+      text-align: center;
+      width : 100%;
+    }
+  }
+}
+
