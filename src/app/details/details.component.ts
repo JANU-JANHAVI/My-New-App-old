@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
 
   getDetails(id: number) {
     this.http
-      .get(`${environment.apiUrl}${appConstant.apiRoute.detailss}/${id}`)
+      .get(`${environment.apiUrl}${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
         console.log(data);
