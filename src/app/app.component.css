@@ -1,5 +1,9 @@
 .container {
   background-color: red;
+  margin-top: -8px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 20px;
   display: flex;
 }
 .bar {
@@ -11,34 +15,36 @@
 .text {
   font-size: 20px;
   font-family: aerial;
+  color:aqua;
 }
 .menu-icon {
   background-color: red;
-  color: black;
+  color: aqua;
   border: none;
 }
 .search-icon {
   background-color: red;
-  color: black;
+  color: aqua;
   border: none;
 }
 .favorite-icon {
   background-color: red;
-  color: black;
+  color: aqua;
   border: none;
 }
 .share-icon {
   background-color: red;
-  color: black;
+  color: aqua;
   border: none;
 }
 .home-icon {
   background-color: red;
-  color: black;
+  color: aqua;
   border: none;
 }
 .product-link {
   background-color: red;
+  color: bisque;
   border: none;
   font-size: larger;
 }
