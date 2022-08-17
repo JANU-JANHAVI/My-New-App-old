@@ -1,5 +1,5 @@
 .container {
-  background-color: red;
+  background-color: orangered;
   margin-top: -8px;
   margin-left: -16px;
   margin-right: -16px;
@@ -7,7 +7,7 @@
   display: flex;
 }
 .bar {
-  background-color: red;
+  background-color: orangered;
 }
 .sample {
   flex: 1 1 auto;
@@ -18,32 +18,32 @@
   color:aqua;
 }
 .menu-icon {
-  background-color: red;
+  background-color: orangered;
   color: aqua;
   border: none;
 }
 .search-icon {
-  background-color: red;
+  background-color: orangered;
   color: aqua;
   border: none;
 }
 .favorite-icon {
-  background-color: red;
+  background-color: orangered;
   color: aqua;
   border: none;
 }
 .share-icon {
-  background-color: red;
+  background-color: orangered;
   color: aqua;
   border: none;
 }
 .home-icon {
-  background-color: red;
+  background-color: orangered;
   color: aqua;
   border: none;
 }
 .product-link {
-  background-color: red;
+  background-color: orangered;
   color: bisque;
   border: none;
   font-size: larger;
