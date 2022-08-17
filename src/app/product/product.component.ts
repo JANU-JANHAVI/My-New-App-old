@@ -19,8 +19,8 @@ export class ProductComponent implements OnInit {
       console.log(data);
     });
   }
-  getProductDetails(event: any, product: any): void {
-    console.log(event);
-    this.router.navigate(['/product', product.id]);
+  getProductDetails( product: any): void {
+    console.log('clicked');
+    this.router.navigate(['details', product.id]);
   }
 }
