@@ -4,8 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { appConstant } from '../app.constant';
 import { environment } from '../environments/environment';
 import { Product } from '../product/product';
-import { FormBuilder, Validators } from '@angular/forms';
-import { FormControl, FormGroup, FormControlName } from '@angular/forms';
+
 
 @Component({
   selector: 'app-details',
@@ -16,13 +15,10 @@ export class DetailsComponent implements OnInit {
 
   product: Product | any = '';
   id: number | string = '';
-  productForm: FormGroup;
-
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
-    private formBuilder: FormBuilder
 
   ) {}
 
@@ -30,25 +26,9 @@ export class DetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe((data) => {
       this.getDetails((data as any).id);
     });
-    this.initialize();
 
   }
-  initialize() {
-    this.initializeForm();
-  }
 
-  initializeForm() {
-    this.productForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      description: ['',Validators.required],
-      category: ['', Validators.required],
-      price: ['', Validators.required],
-    });
-  }
-
-  onSubmit(){
-
-  }
 
   getDetails(id: number) {
     this.http
