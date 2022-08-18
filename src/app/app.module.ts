@@ -10,7 +10,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [AppComponent, ProductComponent, DetailsComponent],
@@ -22,8 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatGridListModule,
     HttpClientModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
