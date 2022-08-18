@@ -38,10 +38,10 @@
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Title</mat-label>
     <input
-      type="email"
+      type="text"
       matInput
-      placeholder="title"
-      formControlName="title"
+      placeholder="Title"
+      formControlName="Title"
     />
     <mat-error *ngIf="productForm.get('title').hasError('required')"
       >Title is <strong>required</strong></mat-error
