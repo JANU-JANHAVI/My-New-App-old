@@ -19,7 +19,7 @@
 
   }
 }
-@media(max-width:992px){
+@media(max-width:500px){
   .product-center{
     display: flex;
     justify-content:center;
@@ -30,4 +30,25 @@
     }
   }
 }
+.form-group{
+  display: flex;
+  padding: 20px;
+  width : 100%;
+  min-width: 120px;
+  flex-flow: wrap;
+  text-align: center;
 
+
+}
+.btn {
+  background-color: aquamarine;
+  border: none;
+  color:black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
