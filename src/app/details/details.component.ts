@@ -40,7 +40,7 @@ export class DetailsComponent implements OnInit {
   initializeForm() {
     this.productForm = this.formBuilder.group({
       title: ['', Validators.required],
-      description: ['', [Validators.required, Validators.email]],
+      description: ['', Validators.required],
       category: ['', Validators.required],
       price: ['', Validators.required],
     });
