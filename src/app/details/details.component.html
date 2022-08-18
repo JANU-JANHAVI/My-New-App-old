@@ -33,32 +33,34 @@
 <span>{{product.rating}}</span>
 </div>
 
-<div class="p-form" *ngIf="productForm">
+<div class="productForm" *ngIf="productForm">
 <form novalidate (ngSubmit)="onSubmit()">
   <div formGroupName="userData">
     <div class="form-group">
-      <label for="username">title</label>
+      <label form="name"><b>Title</b></label>
       <input
         type="text"
         class="form-control"
         id="title"
         formControlName="title"
       />
-      <label for="username">Description</label>
+    
+      <label form="name"><b>Description</b></label>
       <input
         type="text"
         class="form-control"
         id="description"
         formControlName="description"
       />
-      <label for="username">Category</label>
+      
+      <label form="name"><b>Category</b></label>
       <input
         type="text"
         class="form-control"
         id="category"
         formControlName="category"
       />
-      <label for="username">Price</label>
+      <label form="name"><b>Price</b></label>
       <input
         type="text"
         class="form-control"
@@ -67,6 +69,6 @@
       />
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
+  <button class="btn" type="submit">Submit</button>
 </form>
 </div>
