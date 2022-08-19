@@ -21,40 +21,37 @@ export class DetailsComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
-    private formBuilder: FormBuilder
-
+    private fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data) => {
-      this.getDetails((data as any).id);
-    });
-    this.initialize();
-
-  }
-
-  initialize() {
-    this.initializeForm();
-  }
-
-  initializeForm() {
-    this.productForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
-      category: ['', Validators.required],
-      price: ['', Validators.required],
+      this.getProduct((data as any).id);
     });
   }
 
-  onSubmit(){
-
+  initializeForm(product: any) {
+    this.productForm = this.fb.group({
+      title: [product.title, [Validators.required]],
+      description: [product.description, Validators.required],
+      category: [product.category, Validators.required],
+      price: [product.price, Validators.required],
+    });
   }
-  getDetails(id: number) {
+
+  getProduct(id: number) {
     this.http
       .get(`${environment.apiUrl}${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
+        this.initializeForm(data);
         console.log(data);
       });
+  }
+  onSubmit(formValue: any, isValid: boolean) {
+    if (isValid) {
+      console.log(formValue);
+      console.log(isValid);
+    }
   }
 }
