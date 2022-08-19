@@ -32,72 +32,51 @@
 <b>Rating:</b>
 <span>{{product.rating}}</span>
 </div>
-<div class="p-form" *ngIf="productForm">
-<form novalidate (ngSubmit)="onSubmit(productForm.value, productForm.valid)" [formGroup]="productForm" ><div class="grid">
-<div class="col-12 md:col-6 lg:col-3">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Title</mat-label>
-    <input
-      type="text"
-      matInput
-      placeholder="Title"
-      formControlName="Title"
-    />
-    <mat-error *ngIf="productForm.get('title').hasError('required')"
-      >Title is <strong>required</strong></mat-error
-    >
-  </mat-form-field>
-</div>
-<div class="col-12 md:col-6 lg:col-3">
-  <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Description</mat-label>
-      <input
-        type="text"
-        matInput
-        placeholder="Description"
-        formControlName="description"
-      />
-      <mat-error
-        *ngIf="productForm.get('description').hasError('required')"
-        >Description is <strong>required</strong></mat-error
-      >
-    </mat-form-field>
+<div class="product-form">
+<form novalidate (ngSubmit)="onSubmit(productForm.value, productForm.valid)" [formGroup]="productForm" >
+  <div class="grid center">
+    <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput formControlName="title" placeholder="Title">
+        <mat-error *ngIf="productForm.get('title').hasError('required')">
+          This field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea type="text" matInput formControlName="description" placeholder="Description"></textarea>
+        <mat-error *ngIf="productForm.get('description').hasError('required')">
+          This field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Category</mat-label>
+        <input type="text" matInput formControlName="category" placeholder="Category">
+        <mat-error *ngIf="productForm.get('category').hasError('required')">
+          This field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input type="text" matInput formControlName="price" placeholder="Price">
+        <mat-error *ngIf="productForm.get('price').hasError('required')">
+          This field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
   </div>
+ 
+  <button class="btn" type="submit"[disabled]="productForm.invalid" >Submit</button>
+
+</form>
 </div>
-<div class="col-12 md:col-6 lg:col-3">
-  <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Category</mat-label>
-      <input
-        type="text"
-        matInput
-        placeholder="Category"
-        formControlName="category"
-      />
-      <mat-error *ngIf="productForm.get('category').hasError('required')"
-        >Category is <strong>required</strong></mat-error
-      >
-    </mat-form-field>
-  </div>
-</div>
-<div class="col-12 md:col-6 lg:col-3">
-  <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Price</mat-label>
-      <input
-        type="number"
-        matInput
-        placeholder="Price"
-        formControlName="price"
-      />
-      <mat-error *ngIf="productForm.get('price').hasError('required')"
-        >Price is <strong>required</strong></mat-error
-      >
-    </mat-form-field>
-  </div>
-</div>
-</div>
-<button class="btn" type="submit">Submit</button>
+
 
 
