@@ -43,10 +43,8 @@
   border: none;
 }
 .product-link {
-  background-color: orangered;
-  color: bisque;
-  border: none;
-  font-size: larger;
+  background-color: aqua;
+    color: black;
 }
 .details-link {
   background-color: red;
