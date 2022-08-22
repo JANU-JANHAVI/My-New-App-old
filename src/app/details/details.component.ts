@@ -29,13 +29,18 @@ export class DetailsComponent implements OnInit {
       this.getProduct((data as any).id);
     });
   }
-
+  get appConstant() {
+    return appConstant;
+  }
   initializeForm(product: any) {
     this.productForm = this.fb.group({
       title: [product.title, [Validators.required]],
       description: [product.description, Validators.required],
       category: [product.category, Validators.required],
       price: [product.price, Validators.required],
+      brand: [product.brand, Validators.required],
+      stock: [product.stock, Validators.required],
+      rating:[product.rating, Validators.required],
     });
   }
 
@@ -48,10 +53,7 @@ export class DetailsComponent implements OnInit {
         console.log(data);
       });
   }
-  onSubmit(formValue: any, isValid: boolean) {
-    if (isValid) {
-      console.log(formValue);
-      console.log(isValid);
-    }
+  submit() {
+    console.log(this.productForm.value);
   }
-}
+  }
