@@ -1,5 +1,5 @@
 <div class="Products">
-  <h1>Products</h1>
+  <h1 style="text-align:center;">Products</h1>
   <div class="content">
     <mat-grid-list cols="4" rowheight="5">
       <mat-grid-tile *ngFor="let product of products" class="cards">
@@ -15,8 +15,8 @@
             <p>{{ product.description }}</p>
           </mat-card-content>
           <div>
-            <mat-card-actions class="uii">
-              <button class="details-link" (click)="getProductDetails(product)">
+            <mat-card-actions  style="text-align:center;">
+              <button class="details-link"mat-raised-button (click)="getProductDetails(product)">
                 DETAILS
               </button>
             </mat-card-actions>
